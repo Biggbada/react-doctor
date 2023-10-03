@@ -11,6 +11,7 @@ export function NavbarItem({item}) {
             {item.name}
             <i className="icofont-thin-down"></i>
         </a>
+        <p>toto</p>
         {item.children &&
             <ul className="dropdown-menu" aria-labelledby="dropdown02">
                 {item.children.sort((child1, child2) => {
