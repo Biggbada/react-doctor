@@ -1,4 +1,4 @@
-export function HeroHeader() {
+export function HeroHeader({img}, text) {
     return <section className="page-title bg-1">
         <div className="overlay"></div>
         <div className="container">
