@@ -12,7 +12,7 @@ export function PreHeader () {
                     <div className="text-lg-right top-right-bar mt-2 mt-lg-0">
                         <a href="tel:+23-345-67890">
                             <span>Call Now : </span>
-                            <span class="h4">823-4565-13456</span>
+                            <span className="h4">823-4565-13456</span>
                         </a>
                     </div>
                 </div>
