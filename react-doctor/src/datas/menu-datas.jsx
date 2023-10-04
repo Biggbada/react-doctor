@@ -21,6 +21,6 @@ export const menuItems = [
             {id: 13, name: "Blog single", order: 2, linkToUrl: "/blog-single.html", parentId: 11},
         ]
     },
-    {id: 14, name: "Contact", order: 7, linkToUrl: "/blog-sidebar.html"},
+    {id: 14, name: "Contact", order: 7, linkToUrl: "/contact"},
 
 ]

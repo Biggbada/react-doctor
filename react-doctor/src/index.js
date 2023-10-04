@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter} from "react-router-dom";
 import {HomePage} from "./components/pages/HomePage";
 import App from "./App";
+import {Contact} from "./components/pages/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -12,10 +13,16 @@ export const router = createBrowserRouter([
         element: <HomePage/>,
         // loader: rootLoader,
     },
+    {
+        path: "contact",
+        element: <Contact/>,
+    }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App/>
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
