@@ -1,16 +1,47 @@
 import './App.css';
 import {PreHeader} from "./components/header/PreHeader";
-import {Navbar} from "./components/header/Navbar";
 import {FooterContainer} from "./components/footer/FooterContainer";
-import {RouterProvider} from "react-router-dom";
-import {router} from "./index";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {IndexPage} from "./components/pages/IndexPage";
+import {ServicesPage} from "./components/pages/ServicesPage";
+import {DoctorsPage} from "./components/pages/DoctorsPage";
+import {Contact} from "./components/pages/Contact";
+import React from "react";
+import {Root} from "./components/pages/Root";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root/>,
+        // loader: rootLoader,
+        children: [
+            {
+                path: "",
+                element: <IndexPage/>
+            },
+            {
+                path: "services",
+                element: <ServicesPage/>,
+                // loader: rootLoader,
+            },
+            {
+                path: "doctor",
+                element: <DoctorsPage/>
+            },
+            {
+                path: "contact",
+                element: <Contact/>,
+            }
+        ]
+    },
+
+]);
 
 function App() {
 
     return (
         <div className="App">
             <PreHeader/>
-            <Navbar/>
             <RouterProvider router={router}/>
             <FooterContainer/>
         </div>

@@ -1,14 +1,10 @@
 import {NavbarItem} from "./NavbarItem";
 import {menuItems} from "../../datas/menu-datas";
-import {useState} from "react";
+import {Link} from "react-router-dom";
 
 
 export function Navbar() {
-    const [picture, setPicture] = useState('/novena/images/logo.png')
 
-    function pictureHandler() {
-        setPicture('/novena/images/sticker-pin-up-et-tabouret-infirmiere-en-blouse-ve.webp')
-    }
 
     const navItems = [];
     for (let item of menuItems.sort((item1, item2) => {
@@ -23,9 +19,11 @@ export function Navbar() {
 
     return <nav className="navbar navbar-expand-lg navigation" id="navbar">
         <div className="container">
-            <a className="navbar-brand" href="/index">
-                <img onClick={pictureHandler} src={picture} alt="" className="img-fluid"></img>
-            </a>
+            <li className="navbar-brand">
+                <Link to={'/'}>
+                    <img src='/novena/images/logo.png' alt="" className="img-fluid"></img>
+                </Link>
+            </li>
 
             <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
                     aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">

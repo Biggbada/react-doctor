@@ -1,5 +1,9 @@
+import {Link} from "react-router-dom";
+
 export function NavbarSubItems({item}) {
-    return  <li>
-        <a className="dropdown-item" href={item.linkToUrl}>{item.name}</a>
+    return <li>
+        <Link to={item.linkToUrl} l className="dropdown-item">
+            {item.name}
+        </Link>
     </li>
 }

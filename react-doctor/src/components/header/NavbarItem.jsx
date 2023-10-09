@@ -1,16 +1,17 @@
 import {NavbarSubItems} from "./NavbarSubItems";
+import {Link} from "react-router-dom";
 
 export function NavbarItem({item}) {
     return <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle"
-           href={item.linkToUrl}
-           id={item.id}
-           data-toggle="dropdown"
-           aria-haspopup="true"
-           aria-expanded="false">
+        <Link to={item.linkToUrl}
+              className="nav-link dropdown-toggle"
+              id={item.id}
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
             {item.name}
-            <i className="icofont-thin-down"></i>
-        </a>
+        </Link>
+
         {item.children &&
             <ul className="dropdown-menu" aria-labelledby="dropdown02">
                 {item.children.sort((child1, child2) => {
