@@ -3,8 +3,8 @@ export const menuItems = [
     {id: 2, name: "About", order: 2, linkToUrl: "about.html"},
     {id: 3, name: "Services", order: 3, linkToUrl: "services"},
     {
-        id: 4, name: "Department", order: 4, linkToUrl: "department.html", children: [
-            {id: 5, name: "Departments", order: 1, linkToUrl: "department.html", parentId: 4},
+        id: 4, name: "Department", order: 4, linkToUrl: "department", children: [
+            {id: 5, name: "Departments", order: 1, linkToUrl: "department", parentId: 4},
             {id: 6, name: "Department single", order: 2, linkToUrl: "department-single.html", parentId: 4}
         ]
     },

@@ -1,16 +1,19 @@
 import {NavbarSubItems} from "./NavbarSubItems";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export function NavbarItem({item}) {
     return <li className="nav-item dropdown">
-        <Link to={item.linkToUrl}
-              className="nav-link dropdown-toggle"
-              id={item.id}
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false">
+        <NavLink to={item.linkToUrl}
+                 className={({isActive}) => isActive ? "nav-link dropdown-toggle active" : "nav-link dropdown-toggle"}
+                 id={item.id}
+                 data-toggle="dropdown"
+                 aria-haspopup="true"
+                 aria-expanded="false"
+        >
             {item.name}
-        </Link>
+            {item.children && <i className="icofont-thin-down"></i>
+            }
+        </NavLink>
 
         {item.children &&
             <ul className="dropdown-menu" aria-labelledby="dropdown02">

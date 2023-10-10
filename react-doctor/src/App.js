@@ -8,15 +8,20 @@ import {DoctorsPage} from "./components/pages/DoctorsPage";
 import {Contact} from "./components/pages/Contact";
 import React from "react";
 import {Root} from "./components/pages/Root";
+import {ErrorPage} from "./components/pages/ErrorPage";
+import {Departments} from "./components/pages/Departments";
+import {Blog} from "./components/pages/Blog";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root/>,
+        errorElement: <ErrorPage/>,
         // loader: rootLoader,
         children: [
             {
                 path: "",
+                index: true,
                 element: <IndexPage/>
             },
             {
@@ -31,6 +36,18 @@ const router = createBrowserRouter([
             {
                 path: "contact",
                 element: <Contact/>,
+            },
+            {
+                path: "department",
+                element: <Departments/>,
+            },
+            {
+                path: 'department/:id',
+                element: <ServicesPage/>
+            },
+            {
+                path: 'blog',
+                element: <Blog/>
             }
         ]
     },

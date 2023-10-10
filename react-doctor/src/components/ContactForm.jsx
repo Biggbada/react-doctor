@@ -25,6 +25,7 @@ export const ContactUs = () => {
     const handleButtonClick = (event) => {
         event.preventDefault()
         // setCounter(counter + 1)
+        setCounter(counter++)
         test2.current++
         console.log(test2.current)
         // console.log(textValue.current)
